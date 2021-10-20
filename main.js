@@ -24,13 +24,12 @@ const addUser = async (user) => {
 const main = async () => {
   console.log(await getUsers());
   let count = process.argv[2];
-  const user = randomUser(count); // count of users
-  console.log(await addUser(user));
+  createRandomUser(count);
 };
 
 main().then();
 
-function randomUser(count) {
+function createRandomUser(count) {
   const firstName = ["Dima", "Max", "Oleg", "Vlad", "Anton"];
   const lastName = ["Ivanov", "Petrov", "Sidorov", "Smirnov", "Novikov"];
 
@@ -44,10 +43,9 @@ function randomUser(count) {
 
   let today = new Date();
   let year = today.getFullYear();
-  const users = [];
 
-  for (let user = 0; user < count; user++) {
-    users.push({
+  function createUser() {
+    const user = {
       firstName: firstName[getRandomNumber(firstName)],
       lastName: lastName[getRandomNumber(lastName)],
       birthDate:
@@ -55,8 +53,12 @@ function randomUser(count) {
         "/" +
         getRandomDate(1, 12) +
         "/" +
-        Math.abs(year - getRandomDate(13, 18)),
-    });
+        (year - getRandomDate(13, 18)),
+    };
+    addUser(user);
   }
-  return users;
+
+  for (let user = 0; user < count; user++) {
+    createUser();
+  }
 }
