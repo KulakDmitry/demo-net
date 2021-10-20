@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    [
+      {
+        "firstName": "Max",
+        "lastName": "Novikov",
+        "birthDate": "14/3/2006"
+      },
+      {
+        "firstName": "Oleg",
+        "lastName": "Smirnov",
+        "birthDate": "12/8/2007"
+      },
+      {
+        "firstName": "Dima",
+        "lastName": "Sidorov",
+        "birthDate": "11/12/2007"
+      },
+      {
+        "firstName": "Max",
+        "lastName": "Sidorov",
+        "birthDate": "10/12/2006"
+      },
+      {
+        "firstName": "Anton",
+        "lastName": "Petrov",
+        "birthDate": "18/4/2005"
+      },
+      {
+        "firstName": "Vlad",
+        "lastName": "Smirnov",
+        "birthDate": "12/12/2007"
+      },
+      {
+        "firstName": "Dima",
+        "lastName": "Ivanov",
+        "birthDate": "22/5/2006"
+      },
+      {
+        "firstName": "Anton",
+        "lastName": "Petrov",
+        "birthDate": "15/4/2004"
+      },
+      {
+        "firstName": "Anton",
+        "lastName": "Petrov",
+        "birthDate": "18/10/2003"
+      },
+      {
+        "firstName": "Vlad",
+        "lastName": "Petrov",
+        "birthDate": "26/3/2005"
+      }
+    ]
+  ]
+}
