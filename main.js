@@ -1,17 +1,10 @@
-import { getUsers } from "./user-api.js";
-import { createRandomUser } from "./create-user.js";
+import { alphabetSort } from "./user-functions/sorted-users.js";
 
-const userCount = parseInt(process.argv[2]);
+async function main() {
+  await alphabetSort();
+}
 
-const main = async () => {
-  console.log(await getUsers());
-
-  const userList = [];
-
-  for (let i = 0; i < userCount; i++) {
-    userList.push(createRandomUser());
-  }
-  await Promise.all(userList);
-};
-
-main().then();
+for (let i = 0; i < 5; i++) {
+  //Repeat 5 times
+  await main();
+}
